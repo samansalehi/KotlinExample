@@ -60,3 +60,16 @@ Running the application:
 ```docker-compose up```
 
 ```./gradlew bRu```
+
+#getting security token
+This is the PostMan login example:
+```
+curl --location --request POST 'localhost:8080/login' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=67A806FDF3A787AF2D4F6455626BA96C' \
+--data-raw '{
+"username": "****",
+"password": "***"
+}'
+
+```
