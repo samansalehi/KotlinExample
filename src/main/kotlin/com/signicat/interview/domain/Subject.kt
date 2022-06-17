@@ -7,7 +7,6 @@ import com.signicat.interview.domain.dto.SubjectDto
 import com.signicat.interview.domain.dto.UserGroupDto
 import javax.persistence.*
 import javax.validation.constraints.NotBlank
-import javax.validation.constraints.NotNull
 
 @Entity
 data class Subject(
@@ -15,7 +14,9 @@ data class Subject(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
     var id: Long,
+
     @field:NotBlank
+    @Column(unique = true, length = 32)
     val username: String,
     var password: String,
 ) {
