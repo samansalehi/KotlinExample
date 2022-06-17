@@ -61,7 +61,7 @@ Running the application:
 
 ```./gradlew bRu```
 
-#getting security token
+# getting security token
 This is the PostMan login example:
 ```
 curl --location --request POST 'localhost:8080/login' \
